@@ -12,9 +12,9 @@ ips = list(set(ips))
 while ips:
     a = '.'.join(ips[0].split('.')[0:3])
     if dict.get(a) is None:
-        dict.update([(a, [ips.pop(0)])])
+        dict.update([(a, [ips.pop()])])
     else:
-        dict[a].append(ips.pop(0))
+        dict[a].append(ips.pop())
 
 for i in dict.keys():
     print(i, ' :', ', '.join(dict[i]))
